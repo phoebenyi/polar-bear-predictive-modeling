@@ -1,0 +1,22 @@
+Regehr, E.V., Wilson, R.R., Rode, K.D., Runge, M.C. & Stern, H. (2017) 
+Data from: harvesting wildlife affected by climate change: a modelling and management framework for polar bears.  
+Dryad  Digital    Repository, https://dx.doi.org/10.5061/dryad.f68m03.
+
+
+Sea-ice data are provided in two text files: "Chukchi Sea ice data.txt" and "Southern Beaufort Sea ice data.txt". 
+The data and methods to process them are described in the main text of Regehr et al. (2017) and the Supporting Information Appendix S3. 
+Ice data are provided for within the polar bear subpopulation areas as defined by the IUCN Polar Bear Specialist Group (Obbard et al. 2010). 
+Each text file includes 12926 lines with four numbers per line:
+
+YEAR: calendar year 1979-2014
+DAY: 1 to 365
+SEA-IC E-EXTENT:  daily sea-ice extent in kilometers^2
+SEA-ICE-AREA:  daily sea-ice area in kilometers^2
+
+Obbard, M.E., Thiemann, G.W., Peacock, E. & DeBruyn, T.D. (2010) 
+Polar bears: proceedings of the 15th working meeting of the IUCN/SSC polar bear specialist group, 
+Copenhagen, Denmark, 29 June–3 July 2009. IUCN, Gland, Switzerland/Cambridge, UK.
+
+Regehr, E.V., Wilson, R.R., Rode, K.D., Runge, M.C. & Stern, H. (2017) 
+Harvesting wildlife affected by climate change: a modeling and management approach for polar bears. 
+Journal of Applied Ecology. (doi:doi: 10.1111/1365-2664.12864).
