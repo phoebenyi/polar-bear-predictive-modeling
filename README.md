@@ -1,7 +1,9 @@
 # polar-bear-predictive-modeling
-Polar Bear Population Predictive Modelling
+Polar Bear Population Predictive Modeling
 
-This repository uses Time Series Forecasting methods for the Predictive Modeling of Population Dynamics using Sea Ice Data. It includes data processing, trend analysis, model training, evaluation, and visualization.
+This repository uses Time Series Forecasting and Predictive Modeling methods to analyze and forecast population dynamics using Sea Ice Data. The project includes data processing, trend analysis, ARIMA-based forecasting, model training, evaluation, and visualization.
+
+---
 
 ## Concepts
 
@@ -17,7 +19,7 @@ Key steps in predictive modeling include:
 ---
 
 ### Time Series Forecasting
-Time series forecasting is a specialized form of predictive modeling that focuses on data collected at regular time intervals. The goal is to predict future values by understanding temporal dependencies and trends in the data. 
+Time series forecasting is a specialized form of predictive modeling that focuses on data collected at regular time intervals. The goal is to predict future values by understanding temporal dependencies and trends in the data.
 
 Key components of time series data:
 - **Trend**: Long-term increase or decrease in the data.
@@ -25,7 +27,7 @@ Key components of time series data:
 - **Noise**: Random variation that cannot be explained by the model.
 
 In this project:
-- Time series forecasting helps predict daily sea ice extent and area.
+- Time series forecasting helps predict daily and yearly sea ice extent and area.
 - Features like **sine/cosine transformations** of the day and **rolling averages** capture seasonal and trend effects.
 - Yearly and daily information are combined with these features to enhance forecast accuracy.
 
@@ -54,39 +56,54 @@ The dataset used in this project is publicly available on [Dryad Digital Reposit
   - **Cyclical Features**: Uses sine and cosine transformations to model seasonal patterns.
 - Saves processed data for analysis and modeling.
 
-### 2. Model Training
+### 2. ARIMA Forecasting
+- Fits an **ARIMA (AutoRegressive Integrated Moving Average)** model to forecast yearly sea ice extent for specific regions (e.g., Chukchi Sea).
+- Outputs:
+  - Forecast visualization of yearly trends.
+  - Metrics such as **Mean Squared Error (MSE)** and **Mean Absolute Error (MAE)** for evaluation.
+
+### 3. Model Training
 - Trains a **Random Forest Regressor** to predict sea ice extent using features such as:
   - Year, day, rolling averages, and daily differences.
 - The trained model is saved for future predictions.
 
-### 3. Evaluation
+### 4. Evaluation
 - Tests the trained model's accuracy using unseen data.
 - Key metrics include:
   - **Mean Squared Error (MSE)**: Measures average prediction error.
   - **R² (R-Squared)**: Indicates how well the model explains the variability in the data.
 
-### 4. Trend Visualization
+### 5. Trend Visualization
 - Generates visualizations of sea ice trends, including:
   - Daily sea ice extent and area with rolling averages.
   - Day-to-day changes in sea ice extent.
+- For more details, refer to the RESULTS.md file.
+- All generated visualizations are stored in the visualizations/ directory, including:
+  - Sea Ice Extent Trends
+  - Sea Ice Area Trends
+  - Daily Changes in Sea Ice Extent
+  - ARIMA Forecast Visualization
 
 ---
 
-## Installation Instructions  💻
+## Installation Instructions 💻
+
 To set up the environment, clone this repository and install the required packages:
 
 ```bash
-git clone https://github.com/phoebenyi/polar-bear-predictive-modelling.git
-cd polar-bear-predictive-modelling
+git clone https://github.com/phoebenyi/polar-bear-predictive-modeling.git
+cd polar-bear-predictive-modeling
 python3 -m pip install -r requirements.txt
 ```
 
 
-## Running Instructions  ⌨️
+## Running Instructions ⌨️
 Use the following commands:
 ```bash
-python3 scripts/data_processing.py   # Processes Data & Prepare Dataset
-python3 scripts/model_training.py        # Train Predictive Model
-python3 scripts/evaluation.py     # Evaluate Model Performance
-python3 scripts/trend_visualization.py  # Create Visualisations of Trends
+python3 scripts/data_processing.py         # Processes Data & Prepares Dataset
+python3 scripts/arima_forecasting.py       # Forecast Future Sea Ice Extents
+python3 scripts/model_training.py          # Train Predictive Model
+python3 scripts/evaluation.py              # Evaluate Model Performance
+python3 scripts/trend_visualization.py     # Create Visualizations of Trends
 ```
+
